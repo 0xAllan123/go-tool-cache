@@ -83,7 +83,7 @@ type Response struct {
 	Miss      bool   `json:",omitempty"` // cache miss
 	OutputID  []byte `json:",omitempty"`
 	Size      int64  `json:",omitempty"`
-	TimeNanos int64  `json:",omitempty"` // TODO(bradfitz): document
+	TimeNanos int64  `json:",omitempty"` // TODO(0xAllan123): document
 
 	// DiskPath is the absolute path on disk of the OutputID corresponding
 	// a "get" request's ActionID (on cache hit) or a "put" request's

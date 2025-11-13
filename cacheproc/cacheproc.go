@@ -20,7 +20,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/bradfitz/go-tool-cache/wire"
+	"github.com/0xAllan123/go-tool-cache/wire"
 )
 
 // Process implements the cmd/go JSON protocol over stdin & stdout via three
@@ -99,7 +99,7 @@ func (p *Process) Run() error {
 			req.OutputID = req.ObjectID
 		}
 		if req.Command == wire.CmdPut && req.BodySize > 0 {
-			// TODO(bradfitz): stream this and pass a checksum-validating
+			// TODO(0xAllan123): stream this and pass a checksum-validating
 			// io.Reader that validates on EOF.
 			var bodyb []byte
 			if err := jd.Decode(&bodyb); err != nil {

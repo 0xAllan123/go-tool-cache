@@ -19,7 +19,7 @@ GOCACHEPROG shipped as an experiment in Go 1.21. It became official in Go 1.24.
 First, build your cache child process. For example,
 
 ```sh
-$ go install github.com/bradfitz/go-tool-cache/cmd/go-cacher@latest
+$ go install github.com/0xAllan123/go-tool-cache/cmd/go-cacher@latest
 ```
 
 Then tell Go to use it:
@@ -32,7 +32,7 @@ See some stats:
 
 ```sh
 $ GOCACHEPROG="$HOME/go/bin/go-cacher --verbose" go install std
-Defaulting to cache dir /home/bradfitz/.cache/go-cacher ...
+Defaulting to cache dir /home/0xAllan123/.cache/go-cacher ...
 cacher: closing; 548 gets (0 hits, 548 misses, 0 errors); 1090 puts (0 errors)
 ```
 
@@ -40,6 +40,6 @@ Run it again and watch the hit rate go up:
 
 ```sh
 $ GOCACHEPROG="$HOME/go/bin/go-cacher --verbose" go install std
-Defaulting to cache dir /home/bradfitz/.cache/go-cacher ...
+Defaulting to cache dir /home/0xAllan123/.cache/go-cacher ...
 cacher: closing; 808 gets (808 hits, 0 misses, 0 errors); 0 puts (0 errors)
 ```
